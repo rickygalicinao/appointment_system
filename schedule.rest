@@ -1,0 +1,46 @@
+http://localhost:8080/api/v1/schedule
+
+###
+#admin eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDEwOTMxMCwiZXhwIjoxNjA0NDY5MzEwfQ.e4mCDBOQB3tPs4Cov1n375zBdztjdv6rJ7Vpnb2LPrk
+#admin 5f9ab7a1909073259c6d5363
+###
+# add schedule / admin
+POST http://localhost:8080/api/v1/schedule/add
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDEwOTMxMCwiZXhwIjoxNjA0NDY5MzEwfQ.e4mCDBOQB3tPs4Cov1n375zBdztjdv6rJ7Vpnb2LPrk
+
+{
+    "day": "monday",
+    "startTime": "13:00",
+    "endTime": "14:00"
+}
+
+###
+#Get all schedule / ALL
+http://localhost:8080/api/v1/schedule/show
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDEwOTMxMCwiZXhwIjoxNjA0NDY5MzEwfQ.e4mCDBOQB3tPs4Cov1n375zBdztjdv6rJ7Vpnb2LPrk
+
+
+###
+#Get all schedule by day / ALL
+http://localhost:8080/api/v1/schedule/show/day/wednesday
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDEwOTMxMCwiZXhwIjoxNjA0NDY5MzEwfQ.e4mCDBOQB3tPs4Cov1n375zBdztjdv6rJ7Vpnb2LPrk
+
+
+###
+#Get all schedule by startime / ALL
+http://localhost:8080/api/v1/schedule/show/time/13:00
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDEwOTMxMCwiZXhwIjoxNjA0NDY5MzEwfQ.e4mCDBOQB3tPs4Cov1n375zBdztjdv6rJ7Vpnb2LPrk
+
+###
+#update by ID / admin
+#wednesday 5f9cc47fbb632d2ba473241b
+PATCH http://localhost:8080/api/v1/schedule/show/5f9cc47fbb632d2ba473241b
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDEwOTMxMCwiZXhwIjoxNjA0NDY5MzEwfQ.e4mCDBOQB3tPs4Cov1n375zBdztjdv6rJ7Vpnb2LPrk
+
+{
+    "date": "01/22/2020",
+    "startTime": "15:00",
+    "endTime": "16:00"
+}

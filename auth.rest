@@ -1,0 +1,75 @@
+http://localhost:8080/api/v1
+
+###
+
+POST http://localhost:8080/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "firstName": "helpdesk2",
+    "lastName": "helpdesk2",
+    "address": "California",
+    "country": "USA",
+    "phone": "1234567890",
+    "email": "helpdesk2@gmail.com",
+    "password": "password"
+}
+
+###
+
+POST http://localhost:8080/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "admin@gmail.com",
+    "password": "password"
+}
+
+#admin
+#eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDA0NzE0MiwiZXhwIjoxNjA0NDA3MTQyfQ.-TcbCLbSUddJaV3Mk3oCRaQrKhRvG66WxSkoFyPzr4c
+
+#helpdesk
+#eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbHBkZXNrQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2FiOTA5MDczMjU5YzZkNTM2NCIsInJvbGUiOiJtZW1iZXIiLCJpYXQiOjE2MDQwNDcxMjMsImV4cCI6MTYwNDQwNzEyM30.CpqHMvajjshf0O83GP1ZO89vxfsX6NVhubVQpQOAalI
+
+
+#helpdesk2
+#eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbHBkZXNrMkBnbWFpbC5jb20iLCJ1c2VySWQiOiI1ZjliZDQwYTZlOWE0NDJhNzgwYjI1ZWUiLCJyb2xlIjoibWVtYmVyIiwiaWF0IjoxNjA0MDQ4Mjc2LCJleHAiOjE2MDQ0MDgyNzZ9.61ZfM_AkwNJXkUi0TXKClCWqxMdA14KwN7VZ10R_sKk
+###
+
+http://localhost:8080/api/v1/auth/users
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDA0NzE0MiwiZXhwIjoxNjA0NDA3MTQyfQ.-TcbCLbSUddJaV3Mk3oCRaQrKhRvG66WxSkoFyPzr4c
+
+###
+http://localhost:8080/api/v1/auth/users
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbHBkZXNrQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2FiOTA5MDczMjU5YzZkNTM2NCIsInJvbGUiOiJtZW1iZXIiLCJpYXQiOjE2MDQwNDcxMjMsImV4cCI6MTYwNDQwNzEyM30.CpqHMvajjshf0O83GP1ZO89vxfsX6NVhubVQpQOAalI
+
+
+#  5f9ab7a1909073259c6d5363 - admin
+#  5f9ab7ab909073259c6d5364 - helpdesk
+
+###
+
+http://localhost:8080/api/v1/auth/users/5f9ab7a1909073259c6d5363
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDA0NzE0MiwiZXhwIjoxNjA0NDA3MTQyfQ.-TcbCLbSUddJaV3Mk3oCRaQrKhRvG66WxSkoFyPzr4c
+
+###
+http://localhost:8080/api/v1/auth/users/5f9ab7a1909073259c6d5363 
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbHBkZXNrQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2FiOTA5MDczMjU5YzZkNTM2NCIsInJvbGUiOiJtZW1iZXIiLCJpYXQiOjE2MDQwNDcxMjMsImV4cCI6MTYwNDQwNzEyM30.CpqHMvajjshf0O83GP1ZO89vxfsX6NVhubVQpQOAalI
+
+###
+# Update
+PATCH http://localhost:8080/api/v1/auth/users/5f9ab7ab909073259c6d5364
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImhlbHBkZXNrQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2FiOTA5MDczMjU5YzZkNTM2NCIsInJvbGUiOiJtZW1iZXIiLCJpYXQiOjE2MDQwNDcxMjMsImV4cCI6MTYwNDQwNzEyM30.CpqHMvajjshf0O83GP1ZO89vxfsX6NVhubVQpQOAalI
+
+{
+    "firstName": "helpdesk",
+    "lastName": "helpdesk",
+    "address": "California",
+    "country": "USA",
+    "phone": "99999999999",
+    "email": "helpdesk@gmail.com",
+    "password": "password"
+}
+
+###

@@ -1,0 +1,64 @@
+http://localhost:8080/api/v1/appointment
+
+###
+
+POST http://localhost:8080/api/v1/appointment/book
+Content-Type: application/json
+
+{
+    "date": "01/22/2020",
+    "status": "pending",
+    "time": "13:00",
+    "symptom": "ubo",
+    "remarks": "none",
+    "firstname": "guest1",
+    "lastname": "guest1",
+    "age": "22",
+    "gender": "male",
+    "email_add": "guest@gmail.com",
+    "contact_num": "111111111" ,
+    "birthdate": "04/15/1992",
+    "address": "quezon city"
+}
+
+
+###
+#Get all appointments / helpdesk and admin
+http://localhost:8080/api/v1/appointment/book
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkbWluQGdtYWlsLmNvbSIsInVzZXJJZCI6IjVmOWFiN2ExOTA5MDczMjU5YzZkNTM2MyIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTYwNDA0NzE0MiwiZXhwIjoxNjA0NDA3MTQyfQ.-TcbCLbSUddJaV3Mk3oCRaQrKhRvG66WxSkoFyPzr4c
+
+###
+#getby ID
+#5f9c20f3cf04f62ca8bc6a27
+http://localhost:8080/api/v1/appointment/bookings/5f9c20f3cf04f62ca8bc6a27
+Content-Type: application/json
+
+###
+#delete by ID
+#5f9c20f3cf04f62ca8bc6a27
+DELETE http://localhost:8080/api/v1/appointment/bookings/5f9c20f3cf04f62ca8bc6a27
+Content-Type: application/json
+
+
+###
+#update by ID
+#5f9c20f3cf04f62ca8bc6a27
+PATCH http://localhost:8080/api/v1/appointment/bookings/5f9c20f3cf04f62ca8bc6a27
+Content-Type: application/json
+
+{
+    "date": "01/22/2020",
+    "status": "pending",
+    "time": "13:00",
+    "symptom": "ubo",
+    "remarks": "none",
+    "firstname": "guest1",
+    "lastname": "guest1",
+    "age": "22",
+    "gender": "male",
+    "email_add": "guest@gmail.com",
+    "contact_num": "111111111" ,
+    "birthdate": "04/15/1992",
+    "address": "quezon city"
+}
